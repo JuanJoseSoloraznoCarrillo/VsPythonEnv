@@ -4,7 +4,7 @@ namespace vsenvprj{
     public class VsEnv{
         // Private class attributes.
         private string codeKeyWord = "${workspaceFolder}";
-        private string jsonName = ".code-workspace.json";
+        private string jsonName = ".code-workspace";
         private string envFileName = ".env";
         private string envContent = "PYTHONPATH=";
         private string wpath = "";
@@ -48,7 +48,7 @@ namespace vsenvprj{
             Console.WriteLine($">> Openning: {RootFilePath}");
             Console.ResetColor();
             try{
-                Process.Start("code",RootFilePath);
+                Process.Start("C:\\LegacyApp\\VSCode\\Code.exe",RootFilePath);
             }
             catch (Exception except){
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -78,13 +78,17 @@ namespace vsenvprj{
         }
         private List<string> GetWorkingPaths(string? mainFolder){
             string[] dirs = Directory.GetFiles(wpath,"*.py",SearchOption.AllDirectories);
+            string holder = "";
             List<string> paths = new List<string>();
             foreach(string dir in dirs){
                 string? fileName = Tooling.GetLastPathPattern(dir);
                 string relPath = mainFolder+dir.Split(mainFolder)[1];
                 string pathPattern = relPath.Replace($"{mainFolder}",$"{codeKeyWord}");
                 string finalPath = pathPattern.Replace($"{fileName}","").Replace("\\","/");
-                paths.Add(finalPath);
+                if(!finalPath.Contains(holder)){
+                    paths.Add(finalPath);
+                }
+                holder = finalPath;
             }
             return paths;
         }

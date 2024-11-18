@@ -13,12 +13,13 @@ public static class Program{
             else{
                 if(args[0].Contains("--help") || args[0].Contains("-h")){
                     Tooling.PrintHelp();
+                    return 1;
                 }else{
                     Initialize(args[0]);
                 }
             }
         }
-        return 1;
+        return 0;
     }
     public static void Initialize(string path){
         Tooling.Header(true);
