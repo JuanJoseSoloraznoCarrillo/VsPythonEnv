@@ -35,7 +35,7 @@ $RECYCLE.BIN/
 
 # Runtime Files
 *.dll
-*.exe
+#*.exe
 *.log
 *.pid
 *.db
