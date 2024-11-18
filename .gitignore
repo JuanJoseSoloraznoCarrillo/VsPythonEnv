@@ -1,0 +1,59 @@
+# Build Folders
+bin/
+obj/
+out/
+
+# User-Specific Files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code Settings
+.vscode/
+
+# Rider and JetBrains IDEs
+.idea/
+*.sln.iml
+
+# Mac and Linux Files
+.DS_Store
+*.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.idea/
+.idea_modules/
+*.log
+
+# Windows Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Runtime Files
+*.dll
+*.exe
+*.log
+*.pid
+*.db
+*.lock
+*.cache
+*.pdb
+
+# Environment and Configuration Files
+appsettings.Development.json
+appsettings.Local.json
+*.env
+
+# Temporary Files
+*~
+
+# DotNet Folders
+.dotnet/
+
+# Logs
+*.log
+
