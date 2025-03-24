@@ -27,6 +27,7 @@ To get started with this project, follow the instructions below.
     ```sh
     dotnet VsEnv.csproj
     ```
+
 ### Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
